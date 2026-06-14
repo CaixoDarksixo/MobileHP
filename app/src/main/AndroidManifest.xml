@@ -23,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CharacterByIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StaffActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentsByHouseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpellsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

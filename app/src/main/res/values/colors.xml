@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="magic_gold">#DFBA6B</color>
+    <color name="magic_gold_dark">#8C6A2E</color>
+    <color name="magic_gold_light">#FFF3D1</color>
+    <color name="background_dark">#0D0814</color>
+    <color name="card_background">#1E1726</color>
+    <color name="text_primary">#F0ECF4</color>
+    <color name="text_secondary">#A89EB5</color>
+    <color name="exit_red">#E05252</color>
+    <color name="exit_red_light">#FFECEC</color>
 </resources>
