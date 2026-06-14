@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CharacterByIdActivity : AppCompatActivity() {
-
     private lateinit var etCharacterId: TextInputEditText
     private lateinit var btnSearch: Button
     private lateinit var progressBar: ProgressBar
@@ -71,9 +70,10 @@ class CharacterByIdActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.Main) {
             try {
                 // Faz a requisição de rede na thread de IO
-                val response = withContext(Dispatchers.IO) {
-                    RetrofitClient.api.getCharacterById(id)
-                }
+                val response =
+                    withContext(Dispatchers.IO) {
+                        RetrofitClient.api.getCharacterById(id)
+                    }
 
                 val character = response.firstOrNull()
 
@@ -98,7 +98,6 @@ class CharacterByIdActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this@CharacterByIdActivity, "Personagem não encontrado.", Toast.LENGTH_SHORT).show()
                 }
-
             } catch (e: Exception) {
                 // Trata erro de rede, queda de internet, etc.
                 Toast.makeText(this@CharacterByIdActivity, "Erro ao buscar personagem. Tente novamente.", Toast.LENGTH_SHORT).show()
