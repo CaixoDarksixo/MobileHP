@@ -4,20 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@drawable/bg_gradient"
+    android:paddingTop="24dp"
     tools:context=".StudentsByHouseActivity">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Listar Estudantes de uma Casa"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:text="Estudantes por Casa"
+        android:textColor="@color/magic_gold"
+        android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_houses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <RadioButton
+            android:id="@+id/rb_gryffindor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gryffindor (Grifinória)"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/magic_gold"/>
+
+        <RadioButton
+            android:id="@+id/rb_slytherin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slytherin (Sonserina)"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/magic_gold"/>
+
+        <RadioButton
+            android:id="@+id/rb_ravenclaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ravenclaw (Corvinal)"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/magic_gold"/>
+
+        <RadioButton
+            android:id="@+id/rb_hufflepuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hufflepuff (Lufa-Lufa)"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/magic_gold"/>
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:indeterminateTint="@color/magic_gold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_houses" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_students"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_houses"
+        tools:listitem="@layout/item_student" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
