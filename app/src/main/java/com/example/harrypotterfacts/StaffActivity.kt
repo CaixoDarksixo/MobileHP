@@ -73,10 +73,11 @@ class StaffActivity : AppCompatActivity() {
                     }
 
                 // Busca o professor pelo nome ou nome alternativo (case-insensitive)
-                val professor = staffList.firstOrNull { character ->
-                    character.name.contains(query, ignoreCase = true) ||
-                        character.alternateNames.any { alt -> alt.contains(query, ignoreCase = true) }
-                }
+                val professor =
+                    staffList.firstOrNull { character ->
+                        character.name.contains(query, ignoreCase = true) ||
+                            character.alternateNames.any { alt -> alt.contains(query, ignoreCase = true) }
+                    }
 
                 if (professor != null) {
                     // Preenche os dados do professor
