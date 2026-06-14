@@ -35,6 +35,10 @@
         <activity
             android:name=".SpellsActivity"
             android:exported="false" />
+        <activity
+            android:name=".SpellDetailsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
