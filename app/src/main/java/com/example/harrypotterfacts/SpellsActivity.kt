@@ -21,6 +21,7 @@ class SpellsActivity : AppCompatActivity() {
     private lateinit var rvSpells: RecyclerView
     private lateinit var progressBar: ProgressBar
     private lateinit var spellAdapter: SpellAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
