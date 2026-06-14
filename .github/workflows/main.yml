@@ -2,9 +2,9 @@ name: LintAndBuild
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ] # Atualizado para a branch master
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ] # Atualizado para a branch master
 
 jobs:
   build:
@@ -50,4 +50,3 @@ jobs:
         with:
           name: app-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
-          # O artefato ficará disponível por 30 dias por padrão
