@@ -1,4 +1,4 @@
-name: Android CI - Lint & Build
+name: LintAndBuild
 
 on:
   push:
